@@ -1,0 +1,187 @@
+// <template>
+//   <div class="articles">
+//     <div class="backcolor"></div>
+//     <div class="back">
+//       <div class="qute" @click="$router.push('/')">
+//         <img src="../../assets/qute.gif" />
+//       </div>
+//       <div class="spans">
+//         <span style="--i: 0"></span>
+//         <span style="--i: 1"></span>
+//         <span style="--i: 2"></span>
+//         <span style="--i: 3"></span>
+//       </div>
+//       <div class="centerbox">
+//         <div class="articlelist" v-for="item in test" :key="item.id">
+//           <div class="lisstyly">
+//             <img :src="item.src" alt="" />
+//             <div class="title">钢铁是怎样炼成的</div>
+//             <div class="author">会飞的猪</div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </template>
+
+// <script>
+// export default {
+//   data() {
+//     return {
+//       test: [
+//         {
+//           id: 1,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 2,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 3,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 4,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 5,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 6,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 7,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 8,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 9,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//         {
+//           id: 10,
+//           src: "https://img2.baidu.com/it/u=293452468,1559225169&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+//         },
+//       ],
+//     };
+//   },
+// };
+// </script>
+
+// <style lang='less' scoped>
+// .articles {
+//   background-size: 100vw 100vh;
+//   position: relative;
+//   .backcolor {
+//     position: fixed;
+//     // background-color: rgba(240, 255, 167, 0.2);
+//     // background-color: rgba(0, 0, 0, 0.555);
+
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: -1;
+//   }
+//   .qute {
+//     display: block;
+//     position: fixed;
+//     // position: absolute;
+//     width: 100px;
+//     height: 100px;
+//     margin-left: 1350px;
+//     margin-top: 100px;
+//     img {
+//       width: 100px;
+//       height: 100px;
+//     }
+//     &:hover::before {
+//       content: "点我回主页";
+//       background-color: rgba(158, 137, 137, 0.714);
+//       position: absolute;
+//       color: rgb(234, 231, 234);
+//       width: 100px;
+//       height: 30px;
+//       border-radius: 15px;
+//       text-align: center;
+//       line-height: 30px;
+//       top: -20px;
+//     }
+//   }
+//   .spans {
+//     z-index: -1;
+//     position: fixed;
+//     left: 30%;
+//     top: 300px;
+//     transform: translate(-50%, -50%);
+//     span {
+//       margin-top: 140px;
+//       margin-left: 150px;
+//       position: absolute;
+//       top: 0;
+//       width: 400px;
+//       height: 400px;
+//       display: block;
+//       background-color: black;
+//       border-radius: 50%;
+//       transform-origin: 125px 0;
+//       transform: rotate(calc(90deg * var(--i)));
+//       filter: blur(40px);
+//       opacity: 0.7;
+//       &:nth-child(1) {
+//         background-color: rgb(81, 132, 220);
+//       }
+//       &:nth-child(2) {
+//         background-color: pink;
+//       }
+//       &:nth-child(3) {
+//         background-color: rgb(75, 213, 75);
+//       }
+//       &:nth-child(4) {
+//         background-color: rgb(232, 232, 95);
+//       }
+//     }
+//   }
+// }
+
+// .centerbox {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   // background: rgb(255, 255, 255, 0.1);
+//   width: 1000px;
+//   height: auto;
+//   margin: 0 auto;
+//   //   background-color: rgb(255, 188, 63, 0.5);
+//   // border: 1px solid rgb(255, 201, 234);
+//   border-top: none;
+//   border-bottom: none;
+//   .articlelist {
+//     width: 250px;
+//     height: 250px;
+//     // background-color: rgb(102, 224, 163, 0.4);
+//     margin: 100px;
+//     border-radius: 30px;
+//     .title,
+//     .author {
+//       text-align: center;
+//     }
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       border-radius: 30px;
+//       opacity: 0.9;
+//     }
+//     &:hover {
+//       transition: 0.2s linear;
+
+//       transform: scale(1.02);
+//     }
+//   }
+// }
+// </style>
